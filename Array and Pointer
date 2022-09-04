@@ -1,0 +1,90 @@
+#include<stdio.h>
+int myFun();
+int index=0,c=0;
+int* ptr;
+int* ptr1;
+
+int main(){
+    int array[10],subject=0,total=0,average=0,result=0;
+    printf("Number of Subject:");
+    scanf("%d",&subject);
+
+
+    for (int a=0;a<subject;a++){
+        printf("Please enter your score for each subject:");
+        scanf("%d",&array[a]);
+
+    }
+
+
+
+
+    for (int b=0;b<subject;b++){
+        total = total+array[b];
+    }
+    printf("The total is: %d\n",total);
+    average = total/subject;
+    printf("Your average score is: %d\n",average);
+
+    ptr = &array[2];
+    printf("Score of index 2 is: %d\n",*ptr);
+
+
+
+
+
+    printf("Please enter new score at index 2 is:",array[c]);
+    scanf("%d",&*ptr);
+    printf("Score of index 2 is: %d\n",*ptr);
+
+    ptr1 = &array[4];
+    printf("Score of index 4 is: %d\n",*ptr1);
+
+    printf("Please enter new score at index 4 is:",array[c]);
+    scanf("%d",&*ptr1);
+    printf("Score of index 2 is: %d\n",*ptr1);
+
+
+    for (int b=0;b<subject;b++){
+        printf("New score is:%d\n",array[b]);
+    }
+
+
+    for (int b=0;b<subject;b++){
+        if (array[b]<40){
+        printf("You lose.Your score is %d at index %d\n",array[b],b);
+    }else{
+        printf("You win.Your score is %d at index %d\n",array[b],b);
+
+    }
+
+
+
+    }
+    return 0;
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
